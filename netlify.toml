@@ -1,0 +1,23 @@
+[build]
+  command   = "npm run build:prod"
+  publish   = "dist"
+
+[build.environment]
+  NODE_VERSION    = "22"
+  # Set your AdSense publisher ID as an environment variable in Netlify UI:
+  # ADSENSE_CLIENT = "ca-pub-XXXXXXXXXXXXXXXXXX"
+  # Set your site base URL:
+  # SITE_BASE_URL  = "https://examguides.com"
+
+# Redirect all 404s to a custom 404 page (if you create one)
+[[redirects]]
+  from   = "/*"
+  to     = "/404.html"
+  status = 404
+
+# Redirect bare domain to www (optional — remove if not needed)
+# [[redirects]]
+#   from   = "https://examguides.com/*"
+#   to     = "https://www.examguides.com/:splat"
+#   status = 301
+#   force  = true

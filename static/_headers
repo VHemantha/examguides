@@ -1,0 +1,38 @@
+# Netlify / Cloudflare Pages HTTP headers
+# These set security headers and cache control for all pages
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  X-XSS-Protection: 1; mode=block
+
+# Long-lived cache for versioned static assets
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Short cache for HTML (re-validate after 1 hour, serve stale for 1 day)
+/*.html
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# Search index: short cache (updated on every build)
+/search-index.json
+  Cache-Control: public, max-age=3600
+
+# Service worker: no cache (must always be fresh)
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Sitemap and robots: short cache
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Cache-Control: public, max-age=86400

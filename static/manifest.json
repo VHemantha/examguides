@@ -1,0 +1,48 @@
+{
+  "name": "ExamGuides - Free Exam Prep",
+  "short_name": "ExamGuides",
+  "description": "Free study guides, practice questions, and reference tools for professional certification exams.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a4a8a",
+  "orientation": "any",
+  "categories": ["education", "productivity"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Insurance Adjuster",
+      "url": "/insurance-adjuster/",
+      "description": "Insurance adjuster exam study guides"
+    },
+    {
+      "name": "Medical Coding",
+      "url": "/medical-coding/",
+      "description": "CPC and CCS exam study guides"
+    },
+    {
+      "name": "Real Estate",
+      "url": "/real-estate/",
+      "description": "Real estate license exam prep"
+    },
+    {
+      "name": "HVAC / EPA 608",
+      "url": "/hvac/",
+      "description": "EPA 608 and NATE certification prep"
+    }
+  ]
+}

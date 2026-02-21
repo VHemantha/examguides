@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Keep search index private from indexers (it's a data file, not a page)
+Disallow: /search-index.json
+
+# Sitemap location
+Sitemap: https://examguides.com/sitemap.xml
+
+# Crawl delay for polite bots
+Crawl-delay: 1
